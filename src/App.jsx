@@ -4,12 +4,17 @@ import { useState } from "react";
 import "./App.css";
 import Bookmarks from "./Components/Bookmarks/Bookmarks";
 import Cards from "./Components/Cards/Cards";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [bookmark, setBookmark] = useState([]);
   const [totalCredit, setTotalCredit] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const [creditHourRemaining, setCreditHourRemaining] = useState(0);
+
+  const limitOverError = () => toast("You do not have enough credit hours!");
+  const doubleClickError = () => toast("You can't select the same course!");
 
   let remaining = 20;
   const handleAddingBookmark = (item, id) => {
@@ -19,7 +24,7 @@ function App() {
 
     console.log(creditHourRemaining);
     if (isExist) {
-      alert("vala ho");
+      doubleClickError();
     } else {
       bookmark.forEach((item) => (count += item.credit_time));
       if (count <= 20) {
@@ -28,7 +33,7 @@ function App() {
         setTotalPrice(totalPrice + price);
         setCreditHourRemaining(remaining - count);
       } else {
-        alert("your limit is over!");
+        limitOverError();
       }
     }
   };
@@ -46,6 +51,7 @@ function App() {
           bookmark={bookmark}
           creditHourRemaining={creditHourRemaining}
         ></Bookmarks>
+        <ToastContainer />
       </div>
     </>
   );

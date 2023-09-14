@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import logo from "./Frame.png";
-
+import logo from "../../Asset/Frame.png";
+import dollar from "../../Asset/Dollar.png";
 const Card = ({ item, handleAddingBookmark }) => {
   const { id, cover, title, description, credit_time, price } = item;
   return (
@@ -13,7 +13,10 @@ const Card = ({ item, handleAddingBookmark }) => {
           <h2 className="text-lg font-semibold pb-3">{title}</h2>
           <p className="pb-3">{description}</p>
           <div className="flex justify-around">
-            <p>$ Price: {price}</p>
+            <div className="flex gap-2">
+              <img src={dollar} alt="" />
+              <p> Price: {price}</p>
+            </div>
             <div className="flex gap-2">
               <img src={logo} alt="" />
               <p>Credit: {credit_time}hrs</p>
