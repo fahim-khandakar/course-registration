@@ -20,7 +20,7 @@ const Card = ({ item, handleAddingBookmark }) => {
             </div>
           </div>
           <button
-            onClick={() => handleAddingBookmark(item)}
+            onClick={() => handleAddingBookmark(item, id)}
             className="py-2 w-full text-center text-white bg-[#2F80ED] rounded-lg mt-5"
           >
             Select
