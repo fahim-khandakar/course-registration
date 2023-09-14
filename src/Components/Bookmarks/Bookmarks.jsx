@@ -1,4 +1,4 @@
-import Bookmark from "../../Bookmark/Bookmark";
+import Bookmark from "../Bookmark/Bookmark";
 
 /* eslint-disable react/prop-types */
 const Bookmarks = ({
@@ -8,7 +8,7 @@ const Bookmarks = ({
   creditHourRemaining,
 }) => {
   return (
-    <div className="w-1/4 my-10 fixed right-0 p-5">
+    <div className="w-full text-center md:text-left md:w-1/4 my-5 md:my-10 md:fixed md:right-0  md:p-5">
       <h1 className="text-[#2F80ED] font-bold pb-3 text-lg">
         Credit Hours Remaining: {creditHourRemaining} hrs
       </h1>
@@ -16,12 +16,7 @@ const Bookmarks = ({
       <h1 className="text-2xl font-bold py-5">Course Name</h1>
       <ol className="list-decimal min-h-[150px] pb-3">
         {bookmark.map((item, idx) => (
-          <Bookmark
-            totalPrice={totalPrice}
-            totalCredit={totalCredit}
-            key={idx}
-            item={item}
-          ></Bookmark>
+          <Bookmark key={idx} item={item}></Bookmark>
         ))}
       </ol>
       <hr />

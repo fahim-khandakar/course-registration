@@ -11,7 +11,7 @@ const Cards = ({ handleAddingBookmark }) => {
       .then((data) => setCard(data));
   }, []);
   return (
-    <div className="w-3/4 grid grid-cols-3 gap-5 my-10">
+    <div className="w-full md:w-3/4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20 md:gap-5 my-10">
       {card.map((item, idx) => (
         <Card
           handleAddingBookmark={handleAddingBookmark}

@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 
 import { useState } from "react";
-import "./App.css";
 import Bookmarks from "./Components/Bookmarks/Bookmarks";
 import Cards from "./Components/Cards/Cards";
 import { ToastContainer, toast } from "react-toastify";
@@ -40,10 +39,10 @@ function App() {
 
   return (
     <>
-      <h1 className="text-center text-5xl font-bold mt-3">
+      <h1 className="text-center text-3xl md:text-5xl font-bold mt-3">
         Course Registration
       </h1>
-      <div className="flex container mx-auto gap-5 ">
+      <div className="flex flex-col-reverse md:flex-row container mx-auto gap-5 ">
         <Cards handleAddingBookmark={handleAddingBookmark}> </Cards>
         <Bookmarks
           totalPrice={totalPrice}
