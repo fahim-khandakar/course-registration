@@ -8,13 +8,13 @@ const Bookmarks = ({
   creditHourRemaining,
 }) => {
   return (
-    <div className="w-full text-center md:text-left md:w-1/4 my-5 md:my-10 md:fixed md:right-0  md:p-5">
+    <div className="w-2/3  mx-auto text-center md:text-left md:w-1/4 my-5 md:my-10 md:fixed md:right-0  md:p-5">
       <h1 className="text-[#2F80ED] font-bold pb-3 text-lg">
         Credit Hours Remaining: {creditHourRemaining} hrs
       </h1>
       <hr />
       <h1 className="text-2xl font-bold py-5">Course Name</h1>
-      <ol className="list-decimal min-h-[150px] pb-3">
+      <ol className="list-decimal min-h-[150px] pb-3 md:ml-4">
         {bookmark.map((item, idx) => (
           <Bookmark key={idx} item={item}></Bookmark>
         ))}

@@ -10,7 +10,7 @@ function App() {
   const [bookmark, setBookmark] = useState([]);
   const [totalCredit, setTotalCredit] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [creditHourRemaining, setCreditHourRemaining] = useState(0);
+  const [creditHourRemaining, setCreditHourRemaining] = useState(20);
 
   const limitOverError = () => toast("You do not have enough credit hours!");
   const doubleClickError = () => toast("You can't select the same course!");
@@ -21,7 +21,6 @@ function App() {
     const isExist = bookmark.find((item) => item.id === id);
     let count = item.credit_time;
 
-    console.log(creditHourRemaining);
     if (isExist) {
       doubleClickError();
     } else {
