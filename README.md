@@ -1,8 +1,9 @@
-# React + Vite
+1. Added at least 3 Project features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- You can select many course cards to buy.
+- You have a time limit for credits on this website. If you exceed the limit, you will receive an error message.
+- You can see your total course price and total credit time on this website.
 
-Currently, two official plugins are available:
+2. Discuss how i managed the state in my assignment project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+First of all, I use four useState() hooks to store various types of data, such as bookmarks, total credit time, total price, and remaining credit time. useState() is an invaluable React hook, making it easy to manage and update state within my project. I use these four useState() hooks to check conditions and display my data.
